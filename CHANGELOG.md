@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1 (2026-03-31)
+
+Full Changelog: [v0.1.0...v0.1.1](https://github.com/parseocr/parseocr-python/compare/v0.1.0...v0.1.1)
+
+### Chores
+
+* update SDK settings ([b29fab1](https://github.com/parseocr/parseocr-python/commit/b29fab1aad3fbe1809377d5cba29836b52e8a910))
+
 ## 0.1.0 (2026-03-31)
 
 Full Changelog: [v0.0.1...v0.1.0](https://github.com/parseocr/parseocr-python/compare/v0.0.1...v0.1.0)

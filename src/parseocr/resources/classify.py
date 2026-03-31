@@ -60,6 +60,10 @@ class ClassifyResource(SyncAPIResource):
         Classify
 
         Args:
+          file: File to classify, either as raw data or a URL
+
+          types: List of classification types to classify the document into
+
           extra_headers: Send extra headers
 
           extra_query: Add additional query parameters to the request
@@ -120,6 +124,10 @@ class AsyncClassifyResource(AsyncAPIResource):
         Classify
 
         Args:
+          file: File to classify, either as raw data or a URL
+
+          types: List of classification types to classify the document into
+
           extra_headers: Send extra headers
 
           extra_query: Add additional query parameters to the request

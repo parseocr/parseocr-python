@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from typing_extensions import Required, TypedDict
 
-__all__ = ["FileDataParam"]
+__all__ = ["FileURLParam"]
 
 
-class FileDataParam(TypedDict, total=False):
-    file_data: Required[str]
-    """Raw file data encoded as bytes"""
+class FileURLParam(TypedDict, total=False):
+    file_url: Required[str]
+    """URL pointing to the file to be processed"""

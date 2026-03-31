@@ -36,12 +36,16 @@ client = Parseocr(
 )
 
 response = client.classify.run(
-    file={"file_data": "file_data"},
+    file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
     types=[
         {
-            "description": "description",
-            "name": "name",
-        }
+            "description": "Invoices request payment for goods or services provided.",
+            "name": "invoice",
+        },
+        {
+            "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+            "name": "quote",
+        },
     ],
 )
 print(response.credit_used)
@@ -68,12 +72,16 @@ client = AsyncParseocr(
 
 async def main() -> None:
     response = await client.classify.run(
-        file={"file_data": "file_data"},
+        file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
         types=[
             {
-                "description": "description",
-                "name": "name",
-            }
+                "description": "Invoices request payment for goods or services provided.",
+                "name": "invoice",
+            },
+            {
+                "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                "name": "quote",
+            },
         ],
     )
     print(response.credit_used)
@@ -110,12 +118,16 @@ async def main() -> None:
         http_client=DefaultAioHttpClient(),
     ) as client:
         response = await client.classify.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
         )
         print(response.credit_used)
@@ -150,12 +162,16 @@ client = Parseocr()
 
 try:
     client.classify.run(
-        file={"file_data": "file_data"},
+        file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
         types=[
             {
-                "description": "description",
-                "name": "name",
-            }
+                "description": "Invoices request payment for goods or services provided.",
+                "name": "invoice",
+            },
+            {
+                "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                "name": "quote",
+            },
         ],
     )
 except parseocr.APIConnectionError as e:
@@ -201,12 +217,16 @@ client = Parseocr(
 
 # Or, configure per-request:
 client.with_options(max_retries=5).classify.run(
-    file={"file_data": "file_data"},
+    file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
     types=[
         {
-            "description": "description",
-            "name": "name",
-        }
+            "description": "Invoices request payment for goods or services provided.",
+            "name": "invoice",
+        },
+        {
+            "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+            "name": "quote",
+        },
     ],
 )
 ```
@@ -232,12 +252,16 @@ client = Parseocr(
 
 # Override per-request:
 client.with_options(timeout=5.0).classify.run(
-    file={"file_data": "file_data"},
+    file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
     types=[
         {
-            "description": "description",
-            "name": "name",
-        }
+            "description": "Invoices request payment for goods or services provided.",
+            "name": "invoice",
+        },
+        {
+            "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+            "name": "quote",
+        },
     ],
 )
 ```
@@ -282,11 +306,14 @@ from parseocr import Parseocr
 client = Parseocr()
 response = client.classify.with_raw_response.run(
     file={
-        "file_data": "file_data"
+        "file_data": "JVBERi0xLjcKJcfs...KqldOIQo="
     },
     types=[{
-        "description": "description",
-        "name": "name",
+        "description": "Invoices request payment for goods or services provided.",
+        "name": "invoice",
+    }, {
+        "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+        "name": "quote",
     }],
 )
 print(response.headers.get('X-My-Header'))
@@ -307,12 +334,16 @@ To stream the response body, use `.with_streaming_response` instead, which requi
 
 ```python
 with client.classify.with_streaming_response.run(
-    file={"file_data": "file_data"},
+    file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
     types=[
         {
-            "description": "description",
-            "name": "name",
-        }
+            "description": "Invoices request payment for goods or services provided.",
+            "name": "invoice",
+        },
+        {
+            "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+            "name": "quote",
+        },
     ],
 ) as response:
     print(response.headers.get("X-My-Header"))

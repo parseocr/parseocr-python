@@ -3,7 +3,7 @@
 Types:
 
 ```python
-from parseocr.types import ClassifyType, FileData, ClassifyRunResponse
+from parseocr.types import ClassifyType, FileData, FileURL, ClassifyRunResponse
 ```
 
 Methods:

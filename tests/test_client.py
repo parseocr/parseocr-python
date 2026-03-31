@@ -855,12 +855,16 @@ class TestParseocr:
 
         with pytest.raises(APITimeoutError):
             client.classify.with_streaming_response.run(
-                file={"file_data": "file_data"},
+                file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
                 types=[
                     {
-                        "description": "description",
-                        "name": "name",
-                    }
+                        "description": "Invoices request payment for goods or services provided.",
+                        "name": "invoice",
+                    },
+                    {
+                        "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                        "name": "quote",
+                    },
                 ],
             ).__enter__()
 
@@ -873,12 +877,16 @@ class TestParseocr:
 
         with pytest.raises(APIStatusError):
             client.classify.with_streaming_response.run(
-                file={"file_data": "file_data"},
+                file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
                 types=[
                     {
-                        "description": "description",
-                        "name": "name",
-                    }
+                        "description": "Invoices request payment for goods or services provided.",
+                        "name": "invoice",
+                    },
+                    {
+                        "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                        "name": "quote",
+                    },
                 ],
             ).__enter__()
         assert _get_open_connections(client) == 0
@@ -910,12 +918,16 @@ class TestParseocr:
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
         response = client.classify.with_raw_response.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
         )
 
@@ -942,12 +954,16 @@ class TestParseocr:
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
         response = client.classify.with_raw_response.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
             extra_headers={"x-stainless-retry-count": Omit()},
         )
@@ -974,12 +990,16 @@ class TestParseocr:
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
         response = client.classify.with_raw_response.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
             extra_headers={"x-stainless-retry-count": "42"},
         )
@@ -1805,12 +1825,16 @@ class TestAsyncParseocr:
 
         with pytest.raises(APITimeoutError):
             await async_client.classify.with_streaming_response.run(
-                file={"file_data": "file_data"},
+                file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
                 types=[
                     {
-                        "description": "description",
-                        "name": "name",
-                    }
+                        "description": "Invoices request payment for goods or services provided.",
+                        "name": "invoice",
+                    },
+                    {
+                        "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                        "name": "quote",
+                    },
                 ],
             ).__aenter__()
 
@@ -1825,12 +1849,16 @@ class TestAsyncParseocr:
 
         with pytest.raises(APIStatusError):
             await async_client.classify.with_streaming_response.run(
-                file={"file_data": "file_data"},
+                file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
                 types=[
                     {
-                        "description": "description",
-                        "name": "name",
-                    }
+                        "description": "Invoices request payment for goods or services provided.",
+                        "name": "invoice",
+                    },
+                    {
+                        "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                        "name": "quote",
+                    },
                 ],
             ).__aenter__()
         assert _get_open_connections(async_client) == 0
@@ -1862,12 +1890,16 @@ class TestAsyncParseocr:
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
         response = await client.classify.with_raw_response.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
         )
 
@@ -1894,12 +1926,16 @@ class TestAsyncParseocr:
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
         response = await client.classify.with_raw_response.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
             extra_headers={"x-stainless-retry-count": Omit()},
         )
@@ -1926,12 +1962,16 @@ class TestAsyncParseocr:
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
         response = await client.classify.with_raw_response.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
             extra_headers={"x-stainless-retry-count": "42"},
         )

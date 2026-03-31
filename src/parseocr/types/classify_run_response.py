@@ -2,7 +2,7 @@
 
 from .._models import BaseModel
 
-__all__ = ["ClassifyCreateResponse", "Result"]
+__all__ = ["ClassifyRunResponse", "Result"]
 
 
 class Result(BaseModel):
@@ -11,7 +11,7 @@ class Result(BaseModel):
     type: str
 
 
-class ClassifyCreateResponse(BaseModel):
+class ClassifyRunResponse(BaseModel):
     credit_used: int
 
     result: Result

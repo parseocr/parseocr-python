@@ -854,7 +854,7 @@ class TestParseocr:
         respx_mock.post("/v1/classify").mock(side_effect=httpx.TimeoutException("Test timeout error"))
 
         with pytest.raises(APITimeoutError):
-            client.classify.with_streaming_response.create(
+            client.classify.with_streaming_response.run(
                 file={"file_data": "file_data"},
                 types=[
                     {
@@ -872,7 +872,7 @@ class TestParseocr:
         respx_mock.post("/v1/classify").mock(return_value=httpx.Response(500))
 
         with pytest.raises(APIStatusError):
-            client.classify.with_streaming_response.create(
+            client.classify.with_streaming_response.run(
                 file={"file_data": "file_data"},
                 types=[
                     {
@@ -909,7 +909,7 @@ class TestParseocr:
 
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
-        response = client.classify.with_raw_response.create(
+        response = client.classify.with_raw_response.run(
             file={"file_data": "file_data"},
             types=[
                 {
@@ -941,7 +941,7 @@ class TestParseocr:
 
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
-        response = client.classify.with_raw_response.create(
+        response = client.classify.with_raw_response.run(
             file={"file_data": "file_data"},
             types=[
                 {
@@ -973,7 +973,7 @@ class TestParseocr:
 
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
-        response = client.classify.with_raw_response.create(
+        response = client.classify.with_raw_response.run(
             file={"file_data": "file_data"},
             types=[
                 {
@@ -1804,7 +1804,7 @@ class TestAsyncParseocr:
         respx_mock.post("/v1/classify").mock(side_effect=httpx.TimeoutException("Test timeout error"))
 
         with pytest.raises(APITimeoutError):
-            await async_client.classify.with_streaming_response.create(
+            await async_client.classify.with_streaming_response.run(
                 file={"file_data": "file_data"},
                 types=[
                     {
@@ -1824,7 +1824,7 @@ class TestAsyncParseocr:
         respx_mock.post("/v1/classify").mock(return_value=httpx.Response(500))
 
         with pytest.raises(APIStatusError):
-            await async_client.classify.with_streaming_response.create(
+            await async_client.classify.with_streaming_response.run(
                 file={"file_data": "file_data"},
                 types=[
                     {
@@ -1861,7 +1861,7 @@ class TestAsyncParseocr:
 
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
-        response = await client.classify.with_raw_response.create(
+        response = await client.classify.with_raw_response.run(
             file={"file_data": "file_data"},
             types=[
                 {
@@ -1893,7 +1893,7 @@ class TestAsyncParseocr:
 
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
-        response = await client.classify.with_raw_response.create(
+        response = await client.classify.with_raw_response.run(
             file={"file_data": "file_data"},
             types=[
                 {
@@ -1925,7 +1925,7 @@ class TestAsyncParseocr:
 
         respx_mock.post("/v1/classify").mock(side_effect=retry_handler)
 
-        response = await client.classify.with_raw_response.create(
+        response = await client.classify.with_raw_response.run(
             file={"file_data": "file_data"},
             types=[
                 {

@@ -6,7 +6,7 @@ from typing import Iterable
 
 import httpx
 
-from ..types import classify_create_params
+from ..types import classify_run_params
 from .._types import Body, Query, Headers, NotGiven, not_given
 from .._utils import maybe_transform, async_maybe_transform
 from .._compat import cached_property
@@ -18,7 +18,8 @@ from .._response import (
     async_to_streamed_response_wrapper,
 )
 from .._base_client import make_request_options
-from ..types.classify_create_response import ClassifyCreateResponse
+from ..types.classify_type_param import ClassifyTypeParam
+from ..types.classify_run_response import ClassifyRunResponse
 
 __all__ = ["ClassifyResource", "AsyncClassifyResource"]
 
@@ -43,18 +44,18 @@ class ClassifyResource(SyncAPIResource):
         """
         return ClassifyResourceWithStreamingResponse(self)
 
-    def create(
+    def run(
         self,
         *,
-        file: classify_create_params.File,
-        types: Iterable[classify_create_params.Type],
+        file: classify_run_params.File,
+        types: Iterable[ClassifyTypeParam],
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = not_given,
-    ) -> ClassifyCreateResponse:
+    ) -> ClassifyRunResponse:
         """
         Classify
 
@@ -74,12 +75,12 @@ class ClassifyResource(SyncAPIResource):
                     "file": file,
                     "types": types,
                 },
-                classify_create_params.ClassifyCreateParams,
+                classify_run_params.ClassifyRunParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ClassifyCreateResponse,
+            cast_to=ClassifyRunResponse,
         )
 
 
@@ -103,18 +104,18 @@ class AsyncClassifyResource(AsyncAPIResource):
         """
         return AsyncClassifyResourceWithStreamingResponse(self)
 
-    async def create(
+    async def run(
         self,
         *,
-        file: classify_create_params.File,
-        types: Iterable[classify_create_params.Type],
+        file: classify_run_params.File,
+        types: Iterable[ClassifyTypeParam],
         # Use the following arguments if you need to pass additional parameters to the API that aren't available via kwargs.
         # The extra values given here take precedence over values defined on the client or passed to this method.
         extra_headers: Headers | None = None,
         extra_query: Query | None = None,
         extra_body: Body | None = None,
         timeout: float | httpx.Timeout | None | NotGiven = not_given,
-    ) -> ClassifyCreateResponse:
+    ) -> ClassifyRunResponse:
         """
         Classify
 
@@ -134,12 +135,12 @@ class AsyncClassifyResource(AsyncAPIResource):
                     "file": file,
                     "types": types,
                 },
-                classify_create_params.ClassifyCreateParams,
+                classify_run_params.ClassifyRunParams,
             ),
             options=make_request_options(
                 extra_headers=extra_headers, extra_query=extra_query, extra_body=extra_body, timeout=timeout
             ),
-            cast_to=ClassifyCreateResponse,
+            cast_to=ClassifyRunResponse,
         )
 
 
@@ -147,8 +148,8 @@ class ClassifyResourceWithRawResponse:
     def __init__(self, classify: ClassifyResource) -> None:
         self._classify = classify
 
-        self.create = to_raw_response_wrapper(
-            classify.create,
+        self.run = to_raw_response_wrapper(
+            classify.run,
         )
 
 
@@ -156,8 +157,8 @@ class AsyncClassifyResourceWithRawResponse:
     def __init__(self, classify: AsyncClassifyResource) -> None:
         self._classify = classify
 
-        self.create = async_to_raw_response_wrapper(
-            classify.create,
+        self.run = async_to_raw_response_wrapper(
+            classify.run,
         )
 
 
@@ -165,8 +166,8 @@ class ClassifyResourceWithStreamingResponse:
     def __init__(self, classify: ClassifyResource) -> None:
         self._classify = classify
 
-        self.create = to_streamed_response_wrapper(
-            classify.create,
+        self.run = to_streamed_response_wrapper(
+            classify.run,
         )
 
 
@@ -174,6 +175,6 @@ class AsyncClassifyResourceWithStreamingResponse:
     def __init__(self, classify: AsyncClassifyResource) -> None:
         self._classify = classify
 
-        self.create = async_to_streamed_response_wrapper(
-            classify.create,
+        self.run = async_to_streamed_response_wrapper(
+            classify.run,
         )

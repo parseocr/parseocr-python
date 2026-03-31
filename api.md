@@ -3,9 +3,9 @@
 Types:
 
 ```python
-from parseocr.types import ClassifyCreateResponse
+from parseocr.types import ClassifyType, FileData, ClassifyRunResponse
 ```
 
 Methods:
 
-- <code title="post /v1/classify">client.classify.<a href="./src/parseocr/resources/classify.py">create</a>(\*\*<a href="src/parseocr/types/classify_create_params.py">params</a>) -> <a href="./src/parseocr/types/classify_create_response.py">ClassifyCreateResponse</a></code>
+- <code title="post /v1/classify">client.classify.<a href="./src/parseocr/resources/classify.py">run</a>(\*\*<a href="src/parseocr/types/classify_run_params.py">params</a>) -> <a href="./src/parseocr/types/classify_run_response.py">ClassifyRunResponse</a></code>

@@ -21,12 +21,16 @@ class TestClassify:
     @parametrize
     def test_method_run(self, client: Parseocr) -> None:
         classify = client.classify.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
         )
         assert_matches_type(ClassifyRunResponse, classify, path=["response"])
@@ -35,12 +39,16 @@ class TestClassify:
     @parametrize
     def test_raw_response_run(self, client: Parseocr) -> None:
         response = client.classify.with_raw_response.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
         )
 
@@ -53,12 +61,16 @@ class TestClassify:
     @parametrize
     def test_streaming_response_run(self, client: Parseocr) -> None:
         with client.classify.with_streaming_response.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
         ) as response:
             assert not response.is_closed
@@ -79,12 +91,16 @@ class TestAsyncClassify:
     @parametrize
     async def test_method_run(self, async_client: AsyncParseocr) -> None:
         classify = await async_client.classify.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
         )
         assert_matches_type(ClassifyRunResponse, classify, path=["response"])
@@ -93,12 +109,16 @@ class TestAsyncClassify:
     @parametrize
     async def test_raw_response_run(self, async_client: AsyncParseocr) -> None:
         response = await async_client.classify.with_raw_response.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
         )
 
@@ -111,12 +131,16 @@ class TestAsyncClassify:
     @parametrize
     async def test_streaming_response_run(self, async_client: AsyncParseocr) -> None:
         async with async_client.classify.with_streaming_response.run(
-            file={"file_data": "file_data"},
+            file={"file_data": "JVBERi0xLjcKJcfs...KqldOIQo="},
             types=[
                 {
-                    "description": "description",
-                    "name": "name",
-                }
+                    "description": "Invoices request payment for goods or services provided.",
+                    "name": "invoice",
+                },
+                {
+                    "description": "Quotes provide an estimate of costs for goods or services before they are provided.",
+                    "name": "quote",
+                },
             ],
         ) as response:
             assert not response.is_closed

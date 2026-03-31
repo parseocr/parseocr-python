@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from .file_url_param import FileURLParam as FileURLParam
 from .file_data_param import FileDataParam as FileDataParam
 from .classify_run_params import ClassifyRunParams as ClassifyRunParams
 from .classify_type_param import ClassifyTypeParam as ClassifyTypeParam

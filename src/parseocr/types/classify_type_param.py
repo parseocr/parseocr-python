@@ -9,5 +9,7 @@ __all__ = ["ClassifyTypeParam"]
 
 class ClassifyTypeParam(TypedDict, total=False):
     description: Required[str]
+    """Description of the classified type"""
 
     name: Required[str]
+    """Name of the classified type"""

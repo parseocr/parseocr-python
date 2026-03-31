@@ -2,5 +2,7 @@
 
 from __future__ import annotations
 
-from .classify_create_params import ClassifyCreateParams as ClassifyCreateParams
-from .classify_create_response import ClassifyCreateResponse as ClassifyCreateResponse
+from .file_data_param import FileDataParam as FileDataParam
+from .classify_run_params import ClassifyRunParams as ClassifyRunParams
+from .classify_type_param import ClassifyTypeParam as ClassifyTypeParam
+from .classify_run_response import ClassifyRunResponse as ClassifyRunResponse

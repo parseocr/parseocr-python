@@ -1,4 +1,4 @@
 configured_endpoints: 1
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/parseocr%2Fparseocr-18eb7017b9c1cd7e4236669d3d6d65fbe5d03d9e3f6e8bed566f9ed3d44d30c1.yml
-openapi_spec_hash: 5e5ea1d6bcb826ac3b85fecfb0c1e36b
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/parseocr%2Fparseocr-1b455756c7c9e581f5ef7cbc455bec67f444657a0a44f5b7a491f30cbd50053c.yml
+openapi_spec_hash: d813727a8764a07bdf2d749fd0036719
 config_hash: 5085bc910882b2c94039d31370b1bfdf

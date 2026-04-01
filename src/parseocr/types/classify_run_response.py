@@ -16,7 +16,7 @@ class Result(BaseModel):
 
 
 class ClassifyRunResponse(BaseModel):
-    credit_used: int
+    credit_used: float
     """Cost in EUR (€) for this classification (per page for PDFs, flat for images)"""
 
     result: Result

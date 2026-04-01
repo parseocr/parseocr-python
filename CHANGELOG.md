@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 (2026-04-01)
+
+Full Changelog: [v0.2.0...v0.3.0](https://github.com/parseocr/parseocr-python/compare/v0.2.0...v0.3.0)
+
+### Features
+
+* **api:** api update ([a9b1560](https://github.com/parseocr/parseocr-python/commit/a9b15608206b20f7148b4d21a97ddef5c62147ab))
+
 ## 0.2.0 (2026-04-01)
 
 Full Changelog: [v0.1.1...v0.2.0](https://github.com/parseocr/parseocr-python/compare/v0.1.1...v0.2.0)

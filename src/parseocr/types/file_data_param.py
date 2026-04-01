@@ -9,4 +9,4 @@ __all__ = ["FileDataParam"]
 
 class FileDataParam(TypedDict, total=False):
     file_data: Required[str]
-    """Raw file data encoded as bytes"""
+    """Raw file data encoded as a base64 string"""

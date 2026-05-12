@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.4.0 (2026-05-12)
+
+Full Changelog: [v0.3.0...v0.4.0](https://github.com/parseocr/parseocr-python/compare/v0.3.0...v0.4.0)
+
+### Features
+
+* **internal/types:** support eagerly validating pydantic iterators ([f8e7352](https://github.com/parseocr/parseocr-python/commit/f8e73526dac73aa61cb2f2e78d33e0a4f05147a2))
+* support setting headers via env ([f5876c2](https://github.com/parseocr/parseocr-python/commit/f5876c2cab01ea953da63e8efd82c63ff626f4d0))
+
+
+### Bug Fixes
+
+* **client:** add missing f-string prefix in file type error message ([3e66b5d](https://github.com/parseocr/parseocr-python/commit/3e66b5d1edc65526cb395d1a1f0ad382a8f550ef))
+* **client:** preserve hardcoded query params when merging with user params ([c259144](https://github.com/parseocr/parseocr-python/commit/c2591442189ad9f6a98fccc3de6b37750c480d1b))
+* ensure file data are only sent as 1 parameter ([6e330f5](https://github.com/parseocr/parseocr-python/commit/6e330f51a6b470ff9b6899b0b02678c3c4d9ada8))
+* use correct field name format for multipart file arrays ([80f588b](https://github.com/parseocr/parseocr-python/commit/80f588b55cb74950c8b6795b164bed18fb109825))
+
+
+### Performance Improvements
+
+* **client:** optimize file structure copying in multipart requests ([8d209ef](https://github.com/parseocr/parseocr-python/commit/8d209ef0eb6ed6c9f9e3c294f05df13d00c73d1c))
+
+
+### Chores
+
+* **internal:** more robust bootstrap script ([746d2c2](https://github.com/parseocr/parseocr-python/commit/746d2c26d0e04a68cc5eaa9d7633427a8eb0c383))
+* **internal:** reformat pyproject.toml ([1871f01](https://github.com/parseocr/parseocr-python/commit/1871f014d08a566c4be9894dba5c9ae72439f69c))
+
 ## 0.3.0 (2026-04-01)
 
 Full Changelog: [v0.2.0...v0.3.0](https://github.com/parseocr/parseocr-python/compare/v0.2.0...v0.3.0)
